@@ -1,0 +1,6 @@
+- name: 机器版本
+  shell: more /etc/redhat-release
+  register: result_redhat_release
+
+- name: 打印  
+  debug: msg="{{result_redhat_release.stdout}}"
